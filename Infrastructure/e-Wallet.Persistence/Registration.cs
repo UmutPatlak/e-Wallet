@@ -1,4 +1,6 @@
-﻿using e_Wallet.Persistence.Context;
+﻿using e_Wallet.Application.Interfaces.Repositories;
+using e_Wallet.Persistence.Context;
+using e_Wallet.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,7 +24,8 @@ namespace e_Wallet.Persistence
          sqlOptions.EnableRetryOnFailure();
      }));
 
-       
+       services.AddScoped(typeof(IReadRepository<>), typeof(ReadRepository<>));
+        services.AddScoped(typeof(IWriteRepository<>), typeof(WriteRepository<>));
 
 
         }
