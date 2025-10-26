@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36310.24 d17.14
+VisualStudioVersion = 17.14.36310.24
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{CBEE3F0D-C2CA-45A2-A33C-48F036D7851C}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "e-Wallet.Infrastructure", "Infrastructure\e-Wallet.Infrastructure\e-Wallet.Infrastructure.csproj", "{B4794722-ADC0-4661-95C1-D73B38530D35}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "e-Wallet.Api", "Presentation\e-Wallet.Api\e-Wallet.Api.csproj", "{0D3527B2-DDBD-48A4-A18A-D2FBBA65509C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "e-Wallet.Mapper", "Core\e-Wallet.Mapper\e-Wallet.Mapper.csproj", "{266F0ECC-C262-4ED2-85CE-07F4616ABF89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{0D3527B2-DDBD-48A4-A18A-D2FBBA65509C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D3527B2-DDBD-48A4-A18A-D2FBBA65509C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D3527B2-DDBD-48A4-A18A-D2FBBA65509C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{266F0ECC-C262-4ED2-85CE-07F4616ABF89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{266F0ECC-C262-4ED2-85CE-07F4616ABF89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{266F0ECC-C262-4ED2-85CE-07F4616ABF89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{266F0ECC-C262-4ED2-85CE-07F4616ABF89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +61,7 @@ Global
 		{5A212F87-7B29-4472-9053-C07D7D1A5FC7} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{B4794722-ADC0-4661-95C1-D73B38530D35} = {517D908D-CAE7-4712-92E7-1003C4602ACE}
 		{0D3527B2-DDBD-48A4-A18A-D2FBBA65509C} = {CBEE3F0D-C2CA-45A2-A33C-48F036D7851C}
+		{266F0ECC-C262-4ED2-85CE-07F4616ABF89} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {684E0486-8EFE-475E-AC5B-B9E0A2D7493F}

@@ -1,5 +1,8 @@
-﻿using e_Wallet.Persistence;
+﻿using e_Wallet.Application;
+using e_Wallet.Mapper;
+using e_Wallet.Persistence;
 using e_Wallet.Persistence.Context;
+using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +15,9 @@ builder.Configuration
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddPersistence(builder.Configuration);
+builder.Services.AddApplication();
+builder.Services.AddCustomMapper();
+
 
 var app = builder.Build();
 
@@ -19,7 +25,9 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
-}
+    app.MapScalarApiReference(); 
+
+        }
 
 app.UseAuthorization();
 app.MapControllers();
