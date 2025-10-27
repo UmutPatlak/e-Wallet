@@ -3,7 +3,7 @@ using e_Wallet.Mapper;
 using e_Wallet.Persistence;
 using e_Wallet.Persistence.Context;
 using Scalar.AspNetCore;
-
+using e_Wallet.Application.Exceptions;
 var builder = WebApplication.CreateBuilder(args);
 
 // Konfigürasyonu yapılandır
@@ -28,6 +28,7 @@ if (app.Environment.IsDevelopment())
     app.MapScalarApiReference(); 
 
         }
+app.ConfigureExceptionHandlingMiddleware();
 
 app.UseAuthorization();
 app.MapControllers();

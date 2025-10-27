@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\e-Wallet.Application\e-Wallet.Application.csproj" />
     <ProjectReference Include="..\..\Core\e-Wallet.Mapper\e-Wallet.Mapper.csproj" />
     <ProjectReference Include="..\..\Infrastructure\e-Wallet.Persistence\e-Wallet.Persistence.csproj" />
   </ItemGroup>
