@@ -9,21 +9,11 @@ using System.Threading.Tasks;
 
 namespace e_Wallet.Persistence.Configuration
 {
-    internal class UserConfiguration : IEntityTypeConfiguration<User>
+    public class UserConfiguration : IEntityTypeConfiguration<User>
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
-            User user1 = new()
-            { Id = 1 , Name = "John", Surname = "Doe"  , IsDeleted = false
-            };
-            User user2 = new()
-            {
-                Id = 2,
-                Name = "Jane",
-                Surname = "Smith",
-                IsDeleted = false
-            };
-            builder.HasData(user1,user2);
+            
         }
     }
 }

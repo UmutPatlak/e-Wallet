@@ -14,11 +14,13 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Scalar.AspNetCore" Version="2.9.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.6" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Core\e-Wallet.Application\e-Wallet.Application.csproj" />
     <ProjectReference Include="..\..\Core\e-Wallet.Mapper\e-Wallet.Mapper.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\e-Wallet.Infrastructure\e-Wallet.Infrastructure.csproj" />
     <ProjectReference Include="..\..\Infrastructure\e-Wallet.Persistence\e-Wallet.Persistence.csproj" />
   </ItemGroup>
 

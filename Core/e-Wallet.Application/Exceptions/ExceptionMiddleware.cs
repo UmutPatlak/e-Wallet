@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using FluentValidation;
+using Microsoft.AspNetCore.Http;
 using SendGrid.Helpers.Errors.Model;
-using System.ComponentModel.DataAnnotations;
 
 
 namespace e_Wallet.Application.Exceptions
@@ -23,8 +23,16 @@ namespace e_Wallet.Application.Exceptions
             int statusCode = GetStatusCode(exception);
             httpContext.Response.ContentType = "application/json";
             httpContext.Response.StatusCode = statusCode;
+            if (exception.GetType() == typeof(ValidationException)) { 
+                return httpContext.Response.WriteAsync(new ExceptionModel
+                {
+                    Errors = ((ValidationException)exception).Errors.Select(e => e.ErrorMessage).ToList(),
+                    StatusCode = StatusCodes.Status400BadRequest
+                }.ToString());
+
+            }
             List<string> errors = new()
-{
+{           
             $" {exception.Message}",
                 $" {exception. InnerException?.ToString()}"
     };

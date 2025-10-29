@@ -6,6 +6,9 @@ namespace e_Wallet.Mapper
     {
         public static void AddCustomMapper(this IServiceCollection services)
         {
-services.AddSingleton<e_Wallet.Application.Interfaces.AutoMapper.IMapper, e_Wallet.Mapper.Mapper>();        }
+services.AddSingleton<e_Wallet.Application.Interfaces.AutoMapper.IMapper, e_Wallet.Mapper.Mapper>();   
+        
+        
+        }
     }
 }

@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace e_Wallet.Application.DTOs
+namespace e_Wallet.Application.Bases
 {
-    public class WalletDto
+     public abstract class BaseRules
     {
-        public Guid Id { get; set; }
 
 
     }
